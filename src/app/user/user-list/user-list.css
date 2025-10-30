@@ -1,0 +1,17 @@
+p {
+    background-color: yellow;
+}
+
+h3 {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: yellow;
+}
+
+table {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    width: 98%;
+}

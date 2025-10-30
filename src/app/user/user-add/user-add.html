@@ -1,0 +1,17 @@
+<form class="form-control" [formGroup]="formulario">
+
+    <h3>Agregar nuevo Usuario</h3>
+    <label for="" class="form-label">Id</label>
+    <input type="text" class="form-control" formControlName="id">
+
+    <label for="" class="form-label">Name</label>
+    <input type="text" class="form-control" formControlName="name">
+
+    <label for="" class="form-label">Lastname</label>
+    <input type="text" class="form-control" formControlName="lastname">
+
+    <br>
+    <button class="btn btn-primary" (click)="navigateTo('/')">Regresar</button>
+    &nbsp;
+    <button class="btn btn-primary" (click)="addNewUser()">Agregar</button>
+</form>

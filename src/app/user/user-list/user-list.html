@@ -1,0 +1,24 @@
+<h3>Listado de Usuarios</h3>
+<button class="btn btn-primary" (click)="navigateTo('/user/add')">Nuevo Usuario</button>
+<table border="1" class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Acción</th>
+    </tr>
+
+    @for (user of (users | async); track user.id) {
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>
+                <a href="/user/update/{{ user.id }}">Editar</a>|
+                <button class="btn btn-link" (click)="deleteUser(user.id)">Eliminar</button>
+            </td>
+        </tr>
+    } @empty {
+
+    }
+</table>
